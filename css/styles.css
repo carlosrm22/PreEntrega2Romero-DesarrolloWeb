@@ -1,0 +1,183 @@
+/* se resetea el documento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Se colocan las fuentes, todas son variaciones de poppins */
+@font-face {
+  font-family: "poppins";
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "poppinsBlack";
+  src: url(../assets/fonts/Poppins/Poppins-Black.ttf);
+}
+
+@font-face {
+  font-family: "poppinsSemiBold";
+  src: url(../assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "poppinsBlackItalic";
+  src: url(../assets/fonts/Poppins/Poppins-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: "poppinsThin";
+  src: url(../assets/fonts/Poppins/Poppins-Thin.ttf);
+}
+
+html {
+  font-size: 62.5%;
+  /* usando este porcentaje aseguramos que el rem visualmente nos diga los pixeles, por ejemplo 1.6rem = 16px o 2rem = 20px y así como 1.8rem = 18px */
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: poppins;
+  background: black;
+  color: rgb(255, 255, 255);
+}
+
+a {
+  color: #ffffff;
+  font-family: poppinsThin;
+  transition: all 0.6s ease-in-out;
+}
+
+a:hover {
+  /* descubrí esta propiedad "hover" en el ejemplo de la actividad 2 del workbook */
+  color: #d8ff00;
+  font-family: "poppinsBlackItalic";
+  text-transform: uppercase;
+}
+
+header {
+  background: black;
+  position: sticky;
+  top: 0%;
+  border-bottom-style: groove;
+  border-bottom-color: #ffffff0e;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoTexto {
+  width: 25%;
+}
+
+.logo {
+  width: 10%;
+  height: 100%;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.redes li {
+  display: inline-block;
+}
+
+.redes img {
+  height: 20px;
+}
+
+.redes-hover:hover {
+  height: 50px;
+}
+
+h1 {
+  font-family: poppinsBlackItalic;
+  font-size: 2.6rem;
+  text-align: center;
+  color: #d8ff00;
+  padding: 2%;
+}
+
+h2,
+h3 {
+  color: #d8ff00;
+  font-family: poppinsSemiBold;
+  font-size: 2rem;
+}
+
+.mapa {
+  border: 0;
+  width: 100%;
+  height: 300px;
+}
+
+.botones {
+  font-family: poppinsBlackItalic;
+  background-color: #d8ff00;
+  border-style: outset;
+  border-width: 3px;
+  border-color: #d8d8d8;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.botones:hover {
+  font-family: poppinsBlack;
+  background-color: #d8ff00;
+  border-style: inset;
+}
+
+input {
+  background-color: aliceblue;
+  color: black;
+  border-style: solid;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 2%;
+
+  background-color: #3a3b38;
+  color: rgb(255, 255, 255);
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 2%;
+}
+
+.contenedor div {
+  padding: 2%;
+}
+
+.contenedor article {
+  background-color: #3a3b38;
+
+  padding: 2%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 2%;
+}
