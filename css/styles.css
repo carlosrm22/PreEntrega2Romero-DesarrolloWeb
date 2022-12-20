@@ -57,6 +57,12 @@ body {
   height: 100vh;
 }
 
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Considerar colocarle un footer al aside */
 
 a {
