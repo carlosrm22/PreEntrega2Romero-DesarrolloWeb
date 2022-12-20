@@ -54,7 +54,7 @@ body {
     "aside footer ";
 
   max-width: max-content;
-  max-height: min-content;
+  height: 100vh;
 }
 
 /* Considerar colocarle un footer al aside */
@@ -63,6 +63,7 @@ a {
   color: #ffffff;
   font-family: poppinsThin;
   cursor: url(../assets/icons/guante.svg), auto;
+  transition: all 1s ease;
 }
 
 a:hover {
@@ -70,27 +71,25 @@ a:hover {
   color: #d8ff00;
   font-family: "poppinsBlackItalic";
   text-transform: uppercase;
-  transition: all 0.3s ease;
 }
 
 header {
   grid-area: header;
-  border-bottom-style: groove;
-  border-bottom-color: #ffffff0e;
   position: sticky;
   top: 0;
   z-index: 1;
   background-color: #000000;
+  box-shadow: 0 2px 10px #2a2a2a;
 }
 
 .logoTexto {
   width: 25%;
-  padding-top: 1.5%;
+  padding-top: 1%;
+  transition: all 0.3s ease;
 }
 
 .logoTexto:hover {
   transform: scale(1.5);
-  transition: all 0.3s ease-in-out;
 }
 
 nav {
@@ -121,14 +120,19 @@ aside {
   flex-direction: column;
   justify-content: stretch;
   text-align: center;
-
   background-color: #0a0a0a;
   color: rgb(255, 255, 255);
+
+  overflow-y: scroll;
 }
 
-aside video {
-  width: 100%;
-  height: 100%;
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #484847;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a1a1a1;
 }
 
 .cabeceraAside {
@@ -136,30 +140,8 @@ aside video {
   top: 0;
   z-index: 1;
   background-color: #0a0a0a;
-}
-
-.logo {
-  width: 70%;
-  padding: 15px 20% 0;
-}
-
-.logo:hover {
-  transform: scale(0.99);
-  transition: all 0.3s ease-in-out;
-}
-
-.redes li {
-  display: inline-block;
-}
-
-.redes img {
-  height: 20px;
-  padding: 0 10%;
-}
-
-.redes-hover:hover {
-  transition: all 0.4s ease-in-out;
-  transform: rotate(360deg) scale(1.5);
+  box-shadow: 0 5px 10px #2a2a2a;
+  padding: 15px 0;
 }
 
 aside img {
@@ -167,14 +149,36 @@ aside img {
   /* height: 100%; */
 }
 
-main {
-  padding: 0 5% 10%;
+aside video {
+  width: 100%;
+  height: 100%;
 }
 
-main li {
-  list-style-type: "🥊 ";
+.logo {
+  width: 30%;
+  transition: transform 0.5s ease;
+  margin-bottom: 10px;
+}
 
-  margin: 0 22px;
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.redes li {
+  display: inline-block;
+}
+.redes img {
+  height: 30px;
+  padding: 0 10%;
+  transition: transform 0.5s ease;
+}
+
+.redes-hover:hover {
+  transform: rotate(360deg) scale(1.5);
+}
+
+main {
+  grid-area: main;
 }
 
 h1 {
@@ -185,6 +189,17 @@ h1 {
   padding: 2%;
 }
 
+.mapa {
+  border: 0;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+main p {
+  padding: 1% 25%;
+}
+
 h2,
 h3 {
   color: #d8ff00;
@@ -192,12 +207,39 @@ h3 {
   font-size: 2rem;
 }
 
-.mapa {
-  border: 0;
-  width: 100%;
-  height: 300px;
+main ul {
+  padding: 0 25px;
 }
 
+main li {
+  list-style-type: "🥊 ";
+  padding: 2px;
+  margin: 0 22px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h2 + p {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccionDos {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2%;
+}
 .botones {
   font-family: poppinsBlackItalic;
   background-color: #d8ff00;
@@ -221,11 +263,11 @@ input {
 }
 
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  padding: 2%;
-
   grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 5px 0 7px #2a2a2a;
+  padding: 2%;
+  margin-top: 2%;
 }
