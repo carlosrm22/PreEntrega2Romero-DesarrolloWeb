@@ -57,13 +57,11 @@ body {
   height: 100vh;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
-
-/* Considerar colocarle un footer al aside */
 
 a {
   color: #ffffff;
@@ -88,14 +86,32 @@ header {
   box-shadow: 0 2px 10px #2a2a2a;
 }
 
+nav figure {
+  margin-top: 10px;
+}
+
 .logoTexto {
-  width: 25%;
-  padding-top: 1%;
-  transition: all 0.3s ease;
+  font-family: poppinsBlackItalic;
+  text-transform: uppercase;
+  color: #d8ff00;
+  font-size: 3.5rem;
+  text-shadow: 0 0 1px #000000, 0 0 10px #d8ff00;
 }
 
 .logoTexto:hover {
-  transform: scale(1.5);
+  text-shadow: 0 0 2px #000000, 0 0 20px #d8ff00;
+}
+
+.logoTexto span {
+  font-family: poppins;
+  text-transform: lowercase;
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff;
+  margin: 0 5px;
+}
+
+.logoTexto span:hover {
+  transform: rotate(360deg);
 }
 
 nav {
@@ -206,8 +222,7 @@ main p {
   padding: 1% 25%;
 }
 
-h2,
-h3 {
+.titulos {
   color: #d8ff00;
   font-family: poppinsSemiBold;
   font-size: 2rem;
