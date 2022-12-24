@@ -57,12 +57,6 @@ body {
   height: 100vh;
 }
 
-@media screen and (max-width: 950px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 a {
   color: #ffffff;
   font-family: poppinsThin;
@@ -313,4 +307,11 @@ footer {
   box-shadow: 5px 0 7px #2a2a2a;
   padding: 2%;
   margin-top: 2%;
+}
+
+/* DESKTOP FIRST */
+@media screen and (max-width: 950px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
