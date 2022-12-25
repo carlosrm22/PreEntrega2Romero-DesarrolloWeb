@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Se colocan las fuentes, todas son variaciones de poppins */
@@ -33,15 +33,15 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5% !important;
   /* usando este porcentaje aseguramos que el rem visualmente nos diga los pixeles, por ejemplo 1.6rem = 16px o 2rem = 20px y así como 1.8rem = 18px */
 }
 
 body {
-  font-size: 1.6rem;
-  font-family: poppins;
-  background: black;
-  color: rgb(255, 255, 255);
+  font-size: 1.6rem !important;
+  font-family: poppins !important;
+  background: black !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .grid {
@@ -58,23 +58,23 @@ body {
 }
 
 a {
-  color: #ffffff;
-  font-family: poppinsThin;
-  cursor: url(../assets/icons/guante.svg), auto;
+  color: #ffffff !important;
+  font-family: poppinsThin !important;
+  cursor: url(../assets/icons/guante.svg), auto !important;
   transition: all 1s ease;
 }
 
 a:hover {
   /* descubrí esta propiedad "hover" en el ejemplo de la actividad 2 del workbook */
-  color: #d8ff00;
-  font-family: "poppinsBlackItalic";
+  color: #d8ff00 !important;
+  font-family: "poppinsBlackItalic" !important;
   text-transform: uppercase;
 }
 
 a:active {
-  color: #d8ff00;
-  font-family: "poppinsBlackItalic";
-  text-transform: uppercase;
+  color: #d8ff00 !important;
+  font-family: "poppinsBlackItalic" !important;
+  text-transform: uppercase !important;
 }
 
 header {
@@ -91,9 +91,9 @@ nav figure {
 }
 
 .logoTexto {
-  font-family: poppinsBlackItalic;
+  font-family: poppinsBlackItalic !important;
   text-transform: uppercase;
-  color: #d8ff00;
+  color: #d8ff00 !important;
   font-size: 3.5rem;
   /* text-shadow: 0 0 1px #000000, 0 0 10px #d8ff00; */
   animation: sombraPulso 1.5s infinite;
@@ -117,7 +117,6 @@ nav figure {
   color: #ffffff;
   text-shadow: 0 0 5px #ffffff;
   margin: 0 5px;
-  transform: rotate(45deg);
   transition: rotate 1s ease;
 }
 
