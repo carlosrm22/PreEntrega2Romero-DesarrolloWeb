@@ -32,13 +32,15 @@
   src: url(../assets/fonts/Poppins/Poppins-Thin.ttf);
 }
 
-.row {
-  border: 1px solid aqua;
-}
+/* .row {
+  border: 1px solid rgb(219, 93, 187);
+} */
 
 .columna {
   background-color: rgb(18, 18, 18);
   color: white;
+  /*   border: 1px solid aqua;
+ */
 }
 
 .text-center {
@@ -46,7 +48,7 @@
 }
 
 .viñeta {
-  width: 50%;
+  width: 200px;
   padding: 10px 0 5px;
   transition: all 1s ease;
 }
@@ -173,4 +175,58 @@ a:active {
 
 .logoTexto-x:hover {
   transform: rotate(180deg) scale(1.2);
+}
+
+nav ul {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+nav ul li {
+  padding: 0 15px;
+  list-style-type: none;
+  background-image: radial-gradient(#d8ff00, #ffffff);
+  background-position: 0 100%;
+  background-size: 0 1px;
+  transition: background-size 0.3s;
+  background-repeat: no-repeat;
+}
+
+nav ul li:hover {
+  background-size: 100% 1px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 861px) {
+  nav ul {
+    display: block;
+  }
+  nav ul li {
+    padding: 5px 15px;
+    background-position: 50% 25px;
+    animation: lineaPulso 5s infinite;
+  }
+
+  a {
+    color: #ffffff;
+    font-family: "poppins";
+    text-transform: uppercase;
+    text-shadow: 0 0 3px #d8ff00;
+  }
+}
+@keyframes lineaPulso {
+  0% {
+    background-size: 0 0;
+  }
+
+  50% {
+    background-size: 20% 2px;
+  }
+  100% {
+    background-size: 0 0;
+  }
 }
