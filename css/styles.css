@@ -34,11 +34,15 @@ body {
   color: white;
   background-color: #121212;
   animation: fade-in 2s;
-  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+.height {
+  height: 100vh;
 }
 
 .shadow-up {
-  box-shadow: 0 10px 10px -10px #ffffff50;
+  box-shadow: 5px 10px 10px -10px #ffffff50;
 }
 
 .text-center {
@@ -54,12 +58,6 @@ body {
 .viñeta:hover {
   transform: scale(1.03);
   animation: viñetaDancing 0.5s infinite ease-in-out;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 a {
@@ -89,7 +87,7 @@ a:active {
 strong {
   color: #d8ff00;
   text-shadow: 0 0 5px #ffffff;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 h1,
@@ -110,6 +108,7 @@ p {
 .redes {
   padding: 0 0;
 }
+
 .redes li {
   display: inline-block;
 }
@@ -212,6 +211,12 @@ nav ul li:hover {
   transition: all 0.3s ease-in-out;
 }
 
+main {
+  max-height: 60vh;
+  overflow: auto;
+  margin: 20px 0 0;
+}
+
 .mapa {
   border: 0;
   width: 100%;
@@ -261,9 +266,9 @@ main li {
 }
 
 .aside {
-  height: 770px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  max-height: 60vh;
+  overflow: auto;
+  margin: 20px 0 0;
 }
 
 ::-webkit-scrollbar {
@@ -276,6 +281,7 @@ main li {
 
 aside img {
   width: 100%;
+  animation: fade-in 2s ease-in-out;
 }
 
 aside video {
@@ -283,18 +289,20 @@ aside video {
   height: 100%;
   box-shadow: 0 0 10px 5px #2a2a2a;
   border-radius: 15px;
+  animation: doblez 2s ease;
 }
 
 .asideArticulo {
-  padding: 15px 40px;
-  margin: 15px 50px;
+  padding: 2% 4%;
+  margin: 2% 5% 10%;
   background-color: #0a0a0a;
   box-shadow: 0 5px 10px 5px #2a2a2a;
   border-radius: 15px;
   text-align: left;
 }
+
 .asideArticulo h2 {
-  padding: 0 0 20px;
+  padding: 0 0 5%;
 }
 
 footer {
@@ -338,11 +346,52 @@ footer {
   box-shadow: 0 0 15px #fff;
 }
 
+.whatsapp-button {
+  display: none;
+  position: fixed;
+  bottom: 95px;
+  right: 10px;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px 30px;
+  box-shadow: 0 0 5px 5px #ffffff4d;
+  color: #d8ff00;
+  font-style: oblique;
+  width: 140px;
+  height: 40px;
+  padding: 3px;
+  animation: whatsapp 2s infinite ease-in-out;
+}
+
+.whatsapp-button span {
+  font-family: poppinsSemiBold;
+  font-size: x-small;
+}
+
+.whatsapp-button:hover {
+  display: none;
+}
+
 /* ANIMACIONES */
+@keyframes whatsapp {
+  0% {
+    transform: scale(0.95) rotate(3.5deg);
+  }
+
+  50% {
+    transform: scale(1) rotate(3.5deg);
+  }
+
+  100% {
+    transform: scale(0.95) rotate(3.5deg);
+  }
+}
+
 @keyframes sombraPulso {
   0% {
     text-shadow: 0 0 1px #000000, 0 0 10px #d8ff00;
   }
+
   50% {
     text-shadow: 0 0 2px #000000, 0 0 20px #d8ff00;
   }
@@ -360,6 +409,7 @@ footer {
   50% {
     background-size: 20% 2px;
   }
+
   100% {
     background-size: 0 0;
   }
@@ -373,14 +423,17 @@ footer {
   50% {
     transform: rotate(1deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
 }
+
 @keyframes doblez {
   0% {
     transform: rotateX(90deg);
   }
+
   100% {
     transform: rotateX(0deg);
   }
@@ -390,9 +443,11 @@ footer {
   0% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
@@ -402,18 +457,123 @@ footer {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
 /* RESPONSIVE */
-@media (max-width: 861px) {
+@media (max-width: 270px) {
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 325px) {
+  .redes li a {
+    width: 40px;
+    height: 40px;
+    line-height: 43px;
+    font-size: 150%;
+  }
+
+  .buscar {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .logoTexto {
+    font-size: 10vw;
+  }
+
+  .nav-responsive {
+    margin: 0 10vw;
+  }
+
+  main article {
+    flex-wrap: wrap;
+  }
+
+  footer {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .logoTexto {
+    font-size: 8vw;
+  }
+
+  .redes li a {
+    width: 53px;
+    height: 53px;
+    line-height: 56px;
+    border-radius: 50%;
+    font-size: 190%;
+  }
+
+  .nav-responsive {
+    margin: 0 25vw;
+  }
+
+  .columna-nav {
+    padding: 15px;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  main {
+    max-height: min-content;
+  }
+
+  .aside {
+    max-height: min-content;
+  }
+
+  .whatsapp-button {
+    display: initial;
+  }
+
+  .nav-responsive {
+    box-shadow: 0 0 15px #ffffff18;
+    border-radius: 15px 30px;
+    padding: 0;
+    margin: 0 20vw;
+  }
+
+  .columna-nav {
+    background-color: rgb(18, 18, 18);
+    color: white;
+    padding: 0 15px 15px;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav ul li {
+    padding: 5px 15px;
+    background-position: 50% 25px;
+    animation: lineaPulso 5s infinite;
+  }
+
   a {
     font-family: "poppinsSemiBold";
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 0 0 3px #d8ff00;
+  }
+}
+
+@media (max-width: 861px) {
+  body {
+    overflow: auto;
   }
 
   .footer-a {
@@ -430,6 +590,7 @@ footer {
   .logoTexto {
     letter-spacing: 0;
   }
+
   .redes li a {
     width: 40px;
     height: 40px;
@@ -437,73 +598,26 @@ footer {
     font-size: 150%;
     text-shadow: 0 0 3px #d8ff00;
   }
+
   .nav-responsive {
-    box-shadow: 0 0 15px #ffffff18;
-    border-radius: 15px 30px;
-    padding: 0;
-    margin: 0 20vw;
+    flex-wrap: nowrap;
+    align-items: center;
   }
+
   .columna-nav {
     background-color: rgb(18, 18, 18);
     color: white;
     padding: 0 15px 15px;
   }
-  nav ul {
-    display: block;
-  }
+
   nav ul li {
     padding: 5px 15px;
     background-position: 50% 25px;
-    animation: lineaPulso 5s infinite;
   }
 }
 
-@media (max-width: 768px) {
-  .logoTexto {
-    font-size: 8vw;
-  }
-  .redes li a {
-    width: 53px;
-    height: 53px;
-    line-height: 56px;
-    border-radius: 50%;
-    font-size: 190%;
-  }
+@media (min-width: 1900px) {
   .nav-responsive {
-    margin: 0 25vw;
-  }
-  .columna-nav {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 425px) {
-  .logoTexto {
-    font-size: 10vw;
-  }
-  .nav-responsive {
-    margin: 0 10vw;
-  }
-
-  main article {
-    flex-wrap: wrap;
-  }
-
-  footer {
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 325px) {
-  .redes li a {
-    width: 40px;
-    height: 40px;
-    line-height: 43px;
-    font-size: 150%;
-  }
-  .buscar {
-    display: none;
+    font-size: 1.5rem;
   }
 }
