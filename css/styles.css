@@ -1,3 +1,8 @@
+/* .row {
+  border-color: #d4ff00;
+  border-style: solid;
+} */
+
 /* FUENTES*/
 @font-face {
   font-family: "poppins";
@@ -144,6 +149,10 @@ footer {
 
 .text-italic {
   font-style: oblique;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .height {
@@ -320,6 +329,20 @@ footer {
   box-shadow: 0 0 15px #fff;
 }
 
+.caja {
+  background-color: #0e0e0e;
+  box-shadow: 0 0 10px 5px #ffffff25;
+  border-radius: 15px 30px;
+  padding: 1%;
+  margin: 5% 25% 3%;
+  transform: rotate(1deg);
+  transition: all 0.3s ease;
+}
+
+.caja:hover {
+  transform: scale(1.1) rotate(-1deg);
+}
+
 .whatsapp-button {
   display: none;
   position: fixed;
@@ -369,6 +392,46 @@ footer {
 
 ::-webkit-scrollbar-thumb {
   background-color: #a1a1a1;
+}
+
+/* Pages */
+
+.quienesSomos-img1 {
+  width: 50%;
+  border-radius: 50px 100px;
+  box-shadow: 0 0 15px #d8ff00, 0 0 20px #fff;
+  transform: rotate(1deg);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.quienesSomos-img1:hover {
+  transform: scale(0.95) rotate(-1deg);
+}
+
+.quienesSomos-img2 {
+  width: 50%;
+  border-radius: 100px 50px;
+  box-shadow: 0 0 15px #d8ff00, 0 0 20px #fff;
+  transform: rotate(-1deg);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.quienesSomos-img2:hover {
+  transform: scale(0.95) rotate(1deg);
+}
+
+.politicaPrivacidad {
+  display: block;
+  padding: 1%;
+  margin: 2vw 10vw 3vw;
+  box-shadow: 0 0 10px 5px #ffffff25;
+  border-radius: 30px;
+}
+
+.politicaPrivacidad ul {
+  padding-left: 5vw;
 }
 
 /* ANIMACIONES */
@@ -502,6 +565,12 @@ footer {
   }
 }
 
+@media (min-width: 750px) {
+  video {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .logoTexto {
     font-size: 8vw;
@@ -568,6 +637,10 @@ footer {
     letter-spacing: 3px;
     text-shadow: 0 0 3px #d8ff00;
   }
+
+  video {
+    display: block;
+  }
 }
 
 @media (max-width: 861px) {
@@ -612,6 +685,12 @@ footer {
   nav ul li {
     padding: 5px 15px;
     background-position: 50% 25px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .quienesSomos-img1 {
+    display: none;
   }
 }
 
