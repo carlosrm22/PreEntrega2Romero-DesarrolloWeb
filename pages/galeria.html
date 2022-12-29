@@ -131,43 +131,56 @@
         <div class="col-12 col-md-8 col-xxl-7 order-1 order-md-2 p-0">
           <section>
             <main>
-              <section>
-                <h1>GALERIA</h1>
-                <p>Av. Moliere 311, Tercer piso, Polanco, CDMX</p>
-                <figure class="m-0">
-                  <iframe class="mapa" title="mapa"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4429245282963!2d-99.20310528423232!3d19.436461186882017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d20302977d0aeb%3A0xf5c55b9eaa30830d!2sLibra%20x%20Libra!5e0!3m2!1ses-419!2smx!4v1669847138727!5m2!1ses-419!2smx">
-                  </iframe>
-                </figure>
-                <article>
-                  <p>El entrenamiento de libra x libra combina dos disciplinas
-                    beneficiosas para la salud integral: entrenamiento funcional más
-                    entrenamiento de boxeo.</p>
-                  <p>Entrenamiento en 39 minutos en 10 estaciones de 3 minutos por 1
-                    minuto de descanso (mismo tiempo que dura una pelea de box
-                    profesional).</p>
-                </article>
-                <section class="contamosCon">
-                  <h3>Contamos con:</h3>
-                  <ul>
-                    <li>Regaderas</li>
-                    <li>Ring de box</li>
-                    <li>Cafetería</li>
-                  </ul>
-                </section>
-                <section>
-                  <article class="apartaTuClase">
-                    <h2>Aparta tu clase muestra (gratis)</h2>
-                    <p>Toma una clase muestra privada con un entrenador profesional</p>
-                    <form action="#">
-                      <label for="fecha">Elige la fecha y hora de tu clase gratuita:
-                        <input type="datetime-local" id="fecha" name="fecha" />
-                      </label>
-                      <input class="button" type="submit" value="Aparta tu clase ahora" />
-                    </form>
-                  </article>
-                </section>
-              </section>
+              <div class="ContainerCenter">
+                <!-- Radio Seleccionar -->
+                <input type="radio" name="Carrusel" id="Slider1" checked>
+                <input type="radio" name="Carrusel" id="Slider2">
+                <input type="radio" name="Carrusel" id="Slider3">
+                <!--                 <input type="radio" name="Carrusel" id="Slider4">
+                <input type="radio" name="Carrusel" id="Slider5">
+                <input type="radio" name="Carrusel" id="Slider6">
+                <input type="radio" name="Carrusel" id="Slider7">
+ -->
+                <div class="Carrusels">
+                  <!-- Imagen contenido -->
+                  <div class="Carrusel"></div>
+                  <div class="Carrusel"></div>
+                  <div class="Carrusel"></div>
+                  <!--                   <div class="Carrusel"></div>
+                  <div class="Carrusel"></div>
+                  <div class="Carrusel"></div>
+                  <div class="Carrusel"></div>
+ -->
+                  <!-- Flechas a la izquierda por cada imagen -->
+                  <label for="Slider3" class="ArrowLeft Arrow1 cursor"><i class="fa-solid fa-caret-left"></i></label>
+                  <label for="Slider1" class="ArrowLeft Arrow2 cursor"><i class="fa-solid fa-caret-left"></i></label>
+                  <label for="Slider2" class="ArrowLeft Arrow3 cursor"><i class="fa-solid fa-caret-left"></i></label>
+                  <!--                   <label for="Slider4" class="ArrowLeft Arrow4 cursor"><i class="fa-solid fa-caret-left"></i></label>
+                  <label for="Slider5" class="ArrowLeft Arrow5 cursor"><i class="fa-solid fa-caret-left"></i></label>
+                  <label for="Slider6" class="ArrowLeft Arrow6 cursor"><i class="fa-solid fa-caret-left"></i></label>
+                  <label for="Slider7" class="ArrowLeft Arrow7 cursor"><i class="fa-solid fa-caret-left"></i></label>
+ -->
+                  <!-- Flechas a la derecha por cada imagen -->
+                  <label for="Slider2" class="ArrowRight Arrow1 cursor"><i class="fa-solid fa-caret-right"></i></label>
+                  <label for="Slider3" class="ArrowRight Arrow2 cursor"><i class="fa-solid fa-caret-right"></i></label>
+                  <label for="Slider1" class="ArrowRight Arrow3 cursor"><i class="fa-solid fa-caret-right"></i></label>
+                  <!--                   <label for="Slider4" class="ArrowRight Arrow4 cursor"><i class="fa-solid fa-caret-right"></i></label>
+                  <label for="Slider5" class="ArrowRight Arrow5 cursor"><i class="fa-solid fa-caret-right"></i></label>
+                  <label for="Slider6" class="ArrowRight Arrow6 cursor"><i class="fa-solid fa-caret-right"></i></label>
+                  <label for="Slider7" class="ArrowRight Arrow7 cursor"><i class="fa-solid fa-caret-right"></i></label>
+                </div> -->
+
+                  <!-- Selector circulos inferiores colgantes -->
+                  <div class="Selectors">
+                    <label for="Slider1" class="Selector cursor"></label>
+                    <label for="Slider2" class="Selector cursor"></label>
+                    <label for="Slider3" class="Selector cursor"></label>
+                    <!--                   <label for="Slider4" class="Selector cursor"></label>
+                  <label for="Slider5" class="Selector cursor"></label>
+                  <label for="Slider6" class="Selector cursor"></label>
+                  <label for="Slider7" class="Selector cursor"></label> -->
+                  </div>
+                </div>
             </main>
           </section>
         </div>
